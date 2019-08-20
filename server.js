@@ -23,6 +23,10 @@ var app = express();
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
+app.get('/', function (req, res) {
+  res.render('index');
+});
+
 
 // Configure middleware
 
@@ -42,7 +46,9 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Routes
 
-// A GET route for scraping the echoJS website
+// Clear database
+
+// A GET route for scraping 
 app.get("/scrape", function(req, res) {
     // First, we grab the body of the html with axios
     axios.get("https://www.sportingnews.com").then(function(response) {
@@ -50,16 +56,16 @@ app.get("/scrape", function(req, res) {
       var $ = cheerio.load(response.data);
   
       // Now, we grab every h2 within an article tag, and do the following:
-      $("card__inner-body").each(function(i, element) {
+      $(".card__inner-body").each(function(i, element) {
         // Save an empty result object
         var result = {};
   
         // Add the text and href of every link, and save them as properties of the result object
         result.title = $(this)
-          .children("a")
-          .text();
+          .children(".card__headline--long")
+          .text().trim();
         result.link = $(this)
-          .children("a")
+          .next("a")
           .attr("href");
   
         // Create a new Article using the `result` object built from scraping

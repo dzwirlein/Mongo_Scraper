@@ -2,45 +2,27 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Scraping With Mongoose</title>
-    <style>
-      body { background-color: #F2F6D0 }
-      #wrapper {
-        width: 960px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 5%;
-      }
-      #articles {
-        display: inline-block;
-        overflow: auto;
-        width: 60%;
-        height: 700px;
-      }
-      #notes {
-        float: right;
-        width: 30%;
-      }
-      textarea, input {
-        display: block;
-        width: 100%;
-        background-color: #FCF5C7;
-      }
-      input {
-        height: 36px;
-        font-size: 24px;
-      }
-      textarea {
-        height: 200px;
-        font-size: 18px;
-      }
-    </style>
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-4 text-center">Sports Scraper</h1>
+    <hr>
+    <h3 class="lead text-center">Your daily dose of sports articles.</h3>
+  </div>
+</div>
   </head>
   <body>
+    <div class="header col-12 text-center">
+    <h1>Article Curator</h1>
+    <button type='button' class="btn btn-primary">Get new articles</button>
+    </div>
     <div id="wrapper">
-      <h1>MongoDB Article Scraper</h1>
       <div id="articles"></div>
       <div id="notes"></div>
     </div>
+
+  <footer>
+      <a id="copyright">Copyright &copy; 2019</a>
+  </footer>
+
   </body>
 </html>

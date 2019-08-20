@@ -1,0 +1,59 @@
+body { 
+  background: url("/img/Stadium.jpg") no-repeat;
+  background-size: cover;
+  background-color: black;
+
+}
+#wrapper {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+  background-color:rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+}
+#articles {
+  display: inline-block;
+  overflow: auto;
+  width: 60%;
+  height: 700px;
+}
+#notes {
+  float: right;
+  width: 30%;
+}
+textarea, input {
+  display: block;
+  width: 100%;
+  background-color: #FCF5C7;
+}
+input {
+  height: 36px;
+  font-size: 24px;
+}
+textarea {
+  margin-top: 10px;
+  height: 200px;
+  font-size: 18px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
+footer {
+  margin-top: 50px;
+  background: #e9ecef;
+  height: 150px;
+  Text-align: center;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+a {
+  font-size: 18px;
+  font-weight: bold;
+}
