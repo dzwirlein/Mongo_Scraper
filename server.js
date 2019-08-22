@@ -46,7 +46,6 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Routes
 
-// Clear database
 
 // A GET route for scraping 
 app.get("/scrape", function(req, res) {
@@ -139,3 +138,4 @@ app.get("/scrape", function(req, res) {
 app.listen(PORT, function() {
 console.log("App running on port " + PORT + "!")
 });
+
