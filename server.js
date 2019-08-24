@@ -45,10 +45,7 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
 
-// Connect to the Mongo DB
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 
 // Routes
@@ -138,6 +135,11 @@ app.get("/scrape", function(req, res) {
       });
   });
 
+
+  // Connect to the Mongo DB
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 // Start the server
 app.listen(PORT, function() {
 console.log("App running on port " + PORT + "!")
