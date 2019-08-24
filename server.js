@@ -24,7 +24,11 @@ app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
 app.get('/', function (req, res) {
-  res.render('index');
+  db.Article.find({}).then(function(dbArticle){
+  res.render('index', {
+    Article: dbArticle
+  });
+});
 });
 
 
