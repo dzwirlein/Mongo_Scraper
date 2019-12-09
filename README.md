@@ -4,11 +4,11 @@ An article scraping web application using node.js and cheerio that allows the us
 
 ## Technologies Used
 
-Mongo DB
-Axios
-Cheerio
-Handlebars
-Node.js
+* Mongo DB
+* Axios
+* Cheerio
+* Handlebars
+* Node.js
 
 
 ## Usage
