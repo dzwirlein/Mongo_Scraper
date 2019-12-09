@@ -13,4 +13,4 @@ Node.js
 
 ## Usage
 
-Clone repository and run NPM start 
+Clone repository, install node modules and run NPM start 
